@@ -20,4 +20,15 @@ quick-sharun --make-appimage
 
 # Test the app for 12 seconds, if the app normally quits before that time
 # then skip this or check if some flag can be passed that makes it stay open
-#quick-sharun --test ./dist/*.AppImage
+mkdir -p /var/run/pulse
+if ! getent group pulse 1>/dev/null; then
+  groupadd -r pulse
+fi
+if ! id -u pulse 1>/dev/null; then
+  useradd -r -g pulse -G audio \
+    -d /var/run/pulse -s /usr/bin/nologin pulse 
+fi
+chown pulse:pulse /var/run/pulse
+pulseaudio --system --daemonize --disable-shm --exit-idle-time=60
+
+quick-sharun --test ./dist/*.AppImage
