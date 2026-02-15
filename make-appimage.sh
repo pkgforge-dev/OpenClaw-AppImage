@@ -29,6 +29,6 @@ if ! id -u pulse 1>/dev/null; then
     -d /var/run/pulse -s /usr/bin/nologin pulse 
 fi
 chown pulse:pulse /var/run/pulse
-pulseaudio --system --daemonize --disable-shm --exit-idle-time=60
+pulseaudio --system --daemonize --disable-shm --exit-idle-time=-1
 
 quick-sharun --test ./dist/*.AppImage
