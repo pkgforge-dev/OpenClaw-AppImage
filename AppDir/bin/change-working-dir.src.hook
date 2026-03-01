@@ -1,6 +1,6 @@
 #!/bin/false
 dir=${XDG_CONFIG_HOME:-~/.config}/openclaw
-if [ ! -f "dir"/config.xml ]; then
+if [ ! -f "$dir"/config.xml ]; then
   mkdir -p "$dir"
   cp "$APPDIR"/bin/config.xml "$dir"
   cp "$APPDIR"/bin/SAVES.XML "$dir"
