@@ -40,11 +40,6 @@ cmake .. \
     -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make -j$(nproc)
 cd ../Build_Release
-mv -v openclaw ../../AppDir/bin
-mv -v SAVES.XML ../../AppDir/bin
-mv -v clacon.ttf ../../AppDir/bin
-mv -v config.xml ../../AppDir/bin
-mv -v ASSETS.ZIP ../../AppDir/bin
-mv -v console02.tga ../../AppDir/bin
+mv -v openclaw SAVES.XML clacon.ttf config.xml ASSETS.ZIP console02.tga ../../AppDir/bin
 wget https://github.com/pjasicek/OpenClaw/releases/download/v0.3/OpenClaw_v1.03.zip -O temp.zip && bsdtar -xf temp.zip CLAW.REZ && rm temp.zip
 mv -v CLAW.REZ ../../AppDir/bin
