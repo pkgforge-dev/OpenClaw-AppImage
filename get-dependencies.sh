@@ -12,7 +12,6 @@ pacman -Syu --noconfirm   \
     libdecor              \
     pipewire-audio        \
     pipewire-jack         \
-    sdl2                  \
     sdl2_gfx              \
     sdl2_image            \
     sdl2_mixer            \
