@@ -10,10 +10,11 @@ pacman -Syu --noconfirm   \
     cmake                 \
     fluidsynth            \
     freepats-general-midi \
-    gcc-libs              \
     libdecor              \
+    ncurses               \
     pipewire-audio        \
     pipewire-jack         \
+    readline              \
     sdl2_gfx              \
     sdl2_image            \
     sdl2_mixer            \
