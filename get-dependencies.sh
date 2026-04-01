@@ -10,6 +10,8 @@ pacman -Syu --noconfirm   \
     cmake                 \
     freepats-general-midi \
     libdecor              \
+    pipewire-audio        \
+    pipewire-jack         \
     sdl2                  \
     sdl2_gfx              \
     sdl2_image            \
