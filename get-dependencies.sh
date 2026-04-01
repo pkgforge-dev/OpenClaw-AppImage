@@ -24,7 +24,7 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
-#make-aur-package
+make-aur-package sdl2 --noconfirm
 mkdir -p ./AppDir/share/soundfonts
 cp /usr/share/soundfonts/freepats-general-midi.sf2 ./AppDir/share/soundfonts
 
