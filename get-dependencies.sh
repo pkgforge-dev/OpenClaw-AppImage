@@ -11,10 +11,8 @@ pacman -Syu --noconfirm   \
     fluidsynth            \
     freepats-general-midi \
     libdecor              \
-    ncurses               \
     pipewire-audio        \
     pipewire-jack         \
-    readline              \
     sdl2_gfx              \
     sdl2_image            \
     sdl2_mixer            \
