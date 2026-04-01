@@ -8,15 +8,16 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm   \
     cmake                 \
+    fluidsynth            \
     freepats-general-midi \
+    gcc-libs              \
     libdecor              \
     pipewire-audio        \
     pipewire-jack         \
     sdl2_gfx              \
     sdl2_image            \
     sdl2_mixer            \
-    sdl2_ttf              \
-    timidity++
+    sdl2_ttf
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
