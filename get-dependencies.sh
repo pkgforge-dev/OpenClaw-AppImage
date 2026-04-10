@@ -6,16 +6,15 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm   \
-    cmake                 \
-    fluidsynth            \
-    freepats-general-midi \
-    libdecor              \
-    pipewire-audio        \
-    pipewire-jack         \
-    sdl2_gfx              \
-    sdl2_image            \
-    sdl2_mixer            \
+pacman -Syu --noconfirm \
+    cmake          \
+    fluidsynth     \
+    libdecor       \
+    pipewire-audio \
+    pipewire-jack  \
+    sdl2_gfx       \
+    sdl2_image     \
+    sdl2_mixer     \
     sdl2_ttf
 
 echo "Installing debloated packages..."
@@ -24,8 +23,6 @@ get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
 make-aur-package sdl2 --noconfirm
-#mkdir -p ./AppDir/share/soundfonts
-#cp /usr/share/soundfonts/freepats-general-midi.sf2 ./AppDir/share/soundfonts
 
 # If the application needs to be manually built that has to be done down here
 echo "Making nightly build of OpenClaw..."
