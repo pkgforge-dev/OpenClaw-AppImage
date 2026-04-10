@@ -13,7 +13,6 @@ export DEPLOY_PIPEWIRE=1
 # Deploy dependencies
 quick-sharun ./AppDir/bin/openclaw /usr/lib/libfluidsynth.so*
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
-#echo 'SDL_SOUNDFONTS=${SHARUN_DIR}/share/soundfonts/freepats-general-midi.sf2' >> ./AppDir/.env
 
 # Additional changes can be done in between here
 # this app has problems with other locales breaking physics
