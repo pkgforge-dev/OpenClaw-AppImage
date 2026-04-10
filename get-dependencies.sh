@@ -24,8 +24,8 @@ get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
 make-aur-package sdl2 --noconfirm
-mkdir -p ./AppDir/share/soundfonts
-cp /usr/share/soundfonts/freepats-general-midi.sf2 ./AppDir/share/soundfonts
+#mkdir -p ./AppDir/share/soundfonts
+#cp /usr/share/soundfonts/freepats-general-midi.sf2 ./AppDir/share/soundfonts
 
 # If the application needs to be manually built that has to be done down here
 echo "Making nightly build of OpenClaw..."
