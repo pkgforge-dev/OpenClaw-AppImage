@@ -5,7 +5,7 @@ set -eu
 ARCH=$(uname -m)
 export ARCH
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook:sdl-soundfonts.src.hook"
+export ADD_HOOKS="self-updater.hook:sdl-soundfonts.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export DEPLOY_OPENGL=1
 export DEPLOY_PIPEWIRE=1
@@ -14,7 +14,6 @@ export DEPLOY_PIPEWIRE=1
 quick-sharun ./AppDir/bin/openclaw /usr/lib/libfluidsynth.so*
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
-# Additional changes can be done in between here
 # this app has problems with other locales breaking physics
 echo 'LC_ALL=C.UTF-8' >> ./AppDir/.env
 
