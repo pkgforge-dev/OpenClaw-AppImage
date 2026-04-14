@@ -1,5 +1,5 @@
 #!/bin/sh
-dir=${XDG_CONFIG_HOME:-~/.config}/openclaw
+dir=$CONFIGDIR/openclaw
 if [ ! -f "$dir"/config.xml ]; then
   mkdir -p "$dir"
   cp "$APPDIR"/bin/config.xml "$dir"
