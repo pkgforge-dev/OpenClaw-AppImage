@@ -1,7 +1,7 @@
 #!/bin/sh
 dir=$CONFIGDIR/openclaw
+mkdir -p "$dir"
 if [ ! -f "$dir"/config.xml ]; then
-  mkdir -p "$dir"
   cp "$APPDIR"/bin/config.xml "$dir"
   cp "$APPDIR"/bin/SAVES.XML "$dir"
 fi
