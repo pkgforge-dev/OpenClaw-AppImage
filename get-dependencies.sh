@@ -13,13 +13,12 @@ pacman -Syu --noconfirm \
     pipewire-audio \
     pipewire-jack  \
     sdl2_gfx       \
-    sdl2_image     \
     sdl2_mixer     \
     sdl2_ttf
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano sdl2_image-mini
 
 # Comment this out if you need an AUR package
 make-aur-package sdl2 --noconfirm
