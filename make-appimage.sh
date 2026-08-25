@@ -14,7 +14,6 @@ export DEPLOY_PIPEWIRE=1
 quick-sharun ./AppDir/bin/openclaw /usr/lib/libfluidsynth.so*
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
-# Additional changes can be done in between here
 # this app has problems with other locales breaking physics
 echo 'LC_ALL=C.UTF-8' >> ./AppDir/.env
 
