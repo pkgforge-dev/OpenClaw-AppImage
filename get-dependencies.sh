@@ -25,7 +25,7 @@ echo "Making nightly build of OpenClaw..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/pjasicek/OpenClaw"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./OpenClaw
+git clone --depth 1 "$REPO" ./OpenClaw
 echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
