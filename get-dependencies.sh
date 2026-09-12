@@ -31,9 +31,7 @@ echo "$VERSION" > ~/version
 mkdir -p ./AppDir/bin
 cd ./OpenClaw
 mkdir -p build && cd build
-cmake .. \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make -j$(nproc)
 cd ../Build_Release
 mv -v openclaw SAVES.XML clacon.ttf config.xml ASSETS.ZIP console02.tga ../../AppDir/bin
